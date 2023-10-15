@@ -1,0 +1,31 @@
+.logo {
+  object-fit: cover;
+  height: 6.8rem;
+}
+
+.title {
+  @apply grow;
+
+  h1 {
+    font-family: serif;
+    font-size: 3rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(45deg, #ff0000, #000000, #ef0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 50%;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-family: serif;
+    font-weight: bold;
+  }
+
+  .feather {
+    display: inline;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 3rem;
+  }
+}
