@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <section>
       <nav className="flex w-full fixed top-0">
-        <Link href="#top">
+        <Link href="#top" passHref>
           <img src="/assets/logo.png" className={styles.logo} alt="logo" />
         </Link>
         <div className={styles.title}>
@@ -23,18 +23,21 @@ const Nav = () => {
         </div>
         <div className="nav-links flex flex-col bg-gray-700/75 pb-0">
           <Link
+            passHref
             href="#detective-death"
             className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
           >
             BOOKS
           </Link>
           <Link
+            passHref
             href="#about"
             className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
           >
             ABOUT
           </Link>
           <Link
+            passHref
             href="#contact"
             className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
           >
