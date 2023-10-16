@@ -24,21 +24,21 @@ const Nav = () => {
         <div className="nav-links flex flex-col bg-gray-700/75 pb-0">
           <Link
             passHref
-            href="#detective-death"
+            href="/#detective-death"
             className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
           >
             BOOKS
           </Link>
           <Link
             passHref
-            href="#about"
+            href="/#about"
             className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
           >
             ABOUT
           </Link>
           <Link
             passHref
-            href="#contact"
+            href="/#contact"
             className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
           >
             CONTACT
