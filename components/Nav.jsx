@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <section>
       <nav className="flex w-full fixed top-0">
-        <Link href="#top" passHref>
+        <Link href="/#top" passHref>
           <img src="/assets/logo.png" className={styles.logo} alt="logo" />
         </Link>
         <div className={styles.title}>
