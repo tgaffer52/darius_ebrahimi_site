@@ -1,5 +1,6 @@
 import React from "react";
 import "./globals.css";
+import Instagram from "instagram-web-api";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -16,20 +17,20 @@ export default function Home() {
         className="flex flex-wrap justify-evenly w-screen min-h-screen py-10"
         id="home"
       >
-        <Link href="#detective-death">
+        <a href="/#detective-death">
           <img
             src="/assets/Detective Death Cover.png"
             alt="Detective Death"
             className="book-cover"
           />
-        </Link>
-        <Link href="#tmdup">
+        </a>
+        <a href="/#tmdup">
           <img
             src="/assets/TMDUP.jpg"
             alt="Till Myth Do Us Part"
             className="book-cover"
           />
-        </Link>
+        </a>
       </div>
       <Detective_Death />
       <TDDUP />

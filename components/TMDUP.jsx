@@ -15,7 +15,7 @@ const TDDUP = () => {
         <h1 className="text-white font-serif text-center text-2xl mt-10 leading-loose">
           DEATH. DUTY. MYTHS. WHAT ELSE COULD SEPARATE KAI FROM HIS TRUE LOVE?
         </h1>
-        <p className="text-white font-serif">
+        <p className="text-white font-serif truncate">
           Heaven is not what Kai imagined. <br />
           <br />
           The sun scorches, myths run free, and Kai has everything but the one
