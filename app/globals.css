@@ -36,3 +36,16 @@ body {
   height: 300px;
   max-height: 100vh;
 }
+
+.contact_input {
+  @apply w-full rounded-md border border-gray-800 bg-transparent placeholder:text-gray-600 py-3 px-6 text-base font-medium text-black outline-none focus:border-red-500 focus:shadow-md;
+}
+
+.contact_btn {
+  @apply block my-10 text-center font-bold py-2 px-4 rounded;
+  transition: 1s;
+}
+
+.contact_btn:hover {
+  transition: 1s;
+}

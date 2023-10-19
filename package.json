@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
+    "dotenv": "^16.3.1",
     "embla-carousel-react": "^8.0.0-rc14",
     "font-awesome": "^4.7.0",
     "forever-agent": "^0.6.1",
@@ -21,16 +22,22 @@
     "keen-slider": "^6.8.6",
     "net": "^1.0.2",
     "next": "13.5.4",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
     "react-scroll": "^1.9.0",
     "tls": "^0.0.1"
   },
   "devDependencies": {
+    "@types/node": "20.8.7",
+    "@types/react": "18.2.29",
     "autoprefixer": "^10.4.16",
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
     "sass": "^1.69.3",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.2.2"
   }
 }

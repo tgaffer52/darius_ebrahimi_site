@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import "@app/globals.css";
+import "../app/globals.css";
 import styles from "./Nav.module.scss";
 // import Link from "next/link";
 import React, { useEffect } from "react";

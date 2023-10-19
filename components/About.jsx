@@ -8,7 +8,7 @@ import "../app/globals.css";
 const About = () => {
   const [sliderRef] = useKeenSlider({
     slides: {
-      perView: 3,
+      perView: 2,
       spacing: 15,
     },
   });
@@ -17,9 +17,9 @@ const About = () => {
       id="about"
       className="min-h-screen w-screen flex justify-evenly items-center"
     >
-      <div className="w-1/3 h-1/2">
+      <div className="w-1/2">
         <div ref={sliderRef} className="keen-slider m-12">
-          <div className="keen-slider__slide">
+          <div className="keen-slider__slide w-1/2 bg-cover">
             <img src="/assets/book-castle.jpg" className="" alt="" />
           </div>
           <div className="keen-slider__slide">
