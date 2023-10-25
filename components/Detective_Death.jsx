@@ -1,35 +1,13 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 
-const Detective_Death = () => {
-  const DD = useRef();
-  const home = DD.current;
-  let options = {
-    root: home,
-    rootMargin: "0px",
-    threshold: 1.0,
-  };
-
-  function pushUrl(entries) {
-    console.log(entries);
-    console.log("at Detective Death");
-  }
-
-  useEffect(() => {
-    let observer = new IntersectionObserver(pushUrl, options);
-    if (DD.current) observer.observe(DD.current);
-
-    return () => {
-      if (DD.current) observer.unobserve(DD.current);
-    };
-  }, [DD, options]);
-
+const Detective_Death = (props, dDRef) => {
   return (
     <section
       id="detective-death"
       className="h-screen w-screen flex justify-evenly items-center"
-      ref={DD}
+      ref={dDRef}
     >
       <img
         src="/assets/Detective Death Cover.png"
@@ -69,4 +47,4 @@ const Detective_Death = () => {
   );
 };
 
-export default Detective_Death;
+export default forwardRef(Detective_Death);

@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { forwardRef } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../app/globals.css";
 
-const About = () => {
+const About = (props, aboutRef) => {
   const [sliderRef] = useKeenSlider({
     slides: {
       perView: 2,
@@ -16,6 +16,7 @@ const About = () => {
     <section
       id="about"
       className="min-h-screen w-screen flex justify-evenly items-center"
+      ref={aboutRef}
     >
       <div className="w-1/2">
         <div ref={sliderRef} className="keen-slider m-12">
@@ -45,4 +46,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default forwardRef(About);

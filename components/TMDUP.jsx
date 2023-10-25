@@ -1,10 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const TDDUP = () => {
+const TMDUP = (props, tMDUPRef) => {
   return (
     <section
       id="tmdup"
       className="h-screen w-screen flex justify-evenly items-center"
+      ref={tMDUPRef}
     >
       <img
         src="/assets/TMDUP.jpg"
@@ -67,4 +68,4 @@ const TDDUP = () => {
   );
 };
 
-export default TDDUP;
+export default forwardRef(TMDUP);
