@@ -1,20 +1,41 @@
 "use client";
 
-import Image from "next/image";
 import "../app/globals.css";
 import styles from "./Nav.module.scss";
 // import Link from "next/link";
 import React, { useEffect } from "react";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-} from "react-scroll";
+import Scrollspy from "react-scrollspy";
 
-const Nav = () => {
+const Nav = (bookRef, aboutRef, contactRef) => {
+  {
+    bookRef, aboutRef, contactRef;
+  }
+  console.log(bookRef, aboutRef, contactRef);
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      if (window.scrollY >= 0 && window.scrollY <= window.innerHeight / 2) {
+        console.log("At Home");
+      } else if (
+        aboutRef.current?.offsetTop - window.scrollY <
+        window.innerHeight / 2
+      ) {
+        console.log("At About");
+      } else if (
+        bookRef.current?.offsetTop - window.scrollY <
+        window.innerHeight / 2
+      ) {
+        console.log("At Books");
+      } else {
+        // Etc...
+      }
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scroll(top);
   };
@@ -34,26 +55,36 @@ const Nav = () => {
           </h1>
           <h4 className="text-center">Fantasy Author</h4>
         </div>
-        <div className="nav-links flex flex-col bg-gray-700/75 pb-0">
-          <a
-            href="/#detective-death"
-            className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
-          >
-            BOOKS
-          </a>
-          <a
-            href="/#about"
-            className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
-          >
-            ABOUT
-          </a>
-          <a
-            href="/#contact"
-            className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
-          >
-            CONTACT
-          </a>
-        </div>
+        <Scrollspy
+          items={["detective-death", "about", "contact"]}
+          currentClassName="bg-red-700"
+          className="nav-links flex flex-col bg-gray-700/75 pb-0"
+        >
+          <li>
+            <a
+              href="#detective-death"
+              className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
+            >
+              BOOKS
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
+            >
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              className="text-center text-white hover:bg-red-700/75 rounded-md px-3 py-2 text-sm font-medium"
+            >
+              CONTACT
+            </a>
+          </li>
+        </Scrollspy>
       </nav>
       <div className="h-28"></div>
     </section>

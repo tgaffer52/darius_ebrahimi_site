@@ -16,10 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col">
-        <div id="top" className="hidden"></div>
-        <Nav />
         <div className="container grow">{children}</div>
-        <Footer />
       </body>
     </html>
   );

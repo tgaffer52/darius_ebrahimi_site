@@ -1,10 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useEffect } from "react";
 
 const Detective_Death = () => {
+  const DD = useRef();
+  const home = DD.current;
+  let options = {
+    root: home,
+    rootMargin: "0px",
+    threshold: 1.0,
+  };
+
+  function pushUrl(entries) {
+    console.log(entries);
+    console.log("at Detective Death");
+  }
+
+  useEffect(() => {
+    let observer = new IntersectionObserver(pushUrl, options);
+    if (DD.current) observer.observe(DD.current);
+
+    return () => {
+      if (DD.current) observer.unobserve(DD.current);
+    };
+  }, [DD, options]);
+
   return (
     <section
       id="detective-death"
       className="h-screen w-screen flex justify-evenly items-center"
+      ref={DD}
     >
       <img
         src="/assets/Detective Death Cover.png"
