@@ -93,7 +93,11 @@ export default function Home() {
   return (
     <main>
       <section>
-        <nav className="flex w-full fixed top-0" ref={headerRef}>
+        <nav
+          className="flex w-full fixed top-0"
+          ref={headerRef}
+          onMouseLeave={() => setSubnav(false)}
+        >
           <button
             type="button"
             onClick={() => {
@@ -113,8 +117,14 @@ export default function Home() {
             <h4 className="text-center">Fantasy Author</h4>
           </div>
           <div className="nav-right relative">
-            <ul className="nav-links flex flex-col justify-evenly bg-gray-700/75 pb-0">
-              <ul className="nav-container">
+            <ul className="nav-links relative flex flex-col justify-evenly bg-gray-700/75 pb-0">
+              <ul
+                className={
+                  visibleSection === "dd" || visibleSection === "tmdup"
+                    ? "nav-active"
+                    : "nav-container"
+                }
+              >
                 {subnav ? (
                   <>
                     <div className="bg-gray-700/75 absolute w-44 right-24 list-none">
