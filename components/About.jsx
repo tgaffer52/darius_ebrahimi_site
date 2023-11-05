@@ -1,11 +1,11 @@
 "use client";
 
-import React, { forwardRef } from "react";
+import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../app/globals.css";
 
-const About = (props, aboutRef) => {
+const About = () => {
   const [sliderRef] = useKeenSlider({
     slides: {
       perView: 3,
@@ -16,37 +16,98 @@ const About = (props, aboutRef) => {
     <section
       id="about"
       className="min-h-screen w-screen justify-evenly items-center"
-      ref={aboutRef}
     >
       <div className="flex justify-evenly items-center">
         <div className="w-1/2">
           <div ref={sliderRef} className="keen-slider m-12">
-            <div className="keen-slider__slide w-1/2 bg-cover">
-              <img src="/assets/book-castle.jpg" className="" alt="" />
+            <div className="keen-slider__slide">
+              <img
+                src="/assets/carousel/carousel1.jpg"
+                className=""
+                alt="carousel1"
+              />
             </div>
             <div className="keen-slider__slide">
-              <img src="/assets/deer.jpg" alt="" />
+              <img
+                src="/assets/carousel/carousel2.jpg"
+                className=""
+                alt="carousel2"
+              />
             </div>
             <div className="keen-slider__slide">
-              <img src="assets/ivy.jpg" alt="" />
+              <img
+                src="/assets/carousel/carousel3.jpg"
+                className=""
+                alt="carousel3"
+              />
+            </div>
+            <div className="keen-slider__slide">
+              <img
+                src="/assets/carousel/carousel4.jpg"
+                className=""
+                alt="carousel4"
+              />
+            </div>
+            <div className="keen-slider__slide">
+              <img
+                src="/assets/carousel/carousel5.jpg"
+                className=""
+                alt="carousel5"
+              />
+            </div>
+            <div className="keen-slider__slide">
+              <img
+                src="/assets/carousel/carousel6.jpg"
+                className=""
+                alt="carousel6"
+              />
             </div>
           </div>
         </div>
-        <div className="bg-white w-1/6 text-center instagram thing">
-          <h1>-FIND ME ON INSTAGRAM-</h1>
-          <div className="flex flex-wrap items-center justify-evenly">
-            <img
-              src="/assets/book-castle.jpg"
-              className="w-36 h-36 m-3"
-              alt=""
-            />
-            <img src="/assets/deer.jpg" className="w-36 h-36 m-3" alt="" />
-            <img src="assets/ivy.jpg" className="w-36 h-36 m-3" alt="" />
+        <a
+          href="https://www.instagram.com/dariusebrahimi"
+          target="_blank"
+          className="w-1/5 insta-box"
+        >
+          <div className="bg-white text-center py-3">
+            <h1 class="insta-title">-FIND ME ON INSTAGRAM-</h1>
+            <div className="flex flex-wrap items-center justify-evenly">
+              <img
+                src="/assets/instabox/lightsaber_ivy.jpg"
+                className="insta-photo"
+                alt=""
+              />
+              <img
+                src="/assets/instabox/staircase.jpg"
+                className="insta-photo"
+                alt=""
+              />
+              <img
+                src="/assets/instabox/headshot.jpg"
+                className="insta-photo"
+                alt=""
+              />
+              <img
+                src="/assets/instabox/book-castle.jpg"
+                className="insta-photo"
+                alt=""
+              />
+              <img
+                src="/assets/instabox/vegas.jpg"
+                className="insta-photo"
+                alt=""
+              />
+              <img
+                src="assets/instabox/ivy.jpg"
+                className="insta-photo"
+                alt=""
+              />
+            </div>
           </div>
-        </div>
+        </a>
       </div>
-      <div className="m-24 bg-white/50">
-        <p className="text-2xl leading-loose p-5">
+      <div className="m-16 bg-white/75">
+        <p className="text-xl leading-loose p-5">
           Winner of the 2023 IndieReader Discovery Award for Fantasy. Darius
           Ebrahimi is inspired by mythology, his Persian-American heritage, and
           traveling the world. A graduate of the University of Colorado at
@@ -60,4 +121,4 @@ const About = (props, aboutRef) => {
   );
 };
 
-export default forwardRef(About);
+export default About;

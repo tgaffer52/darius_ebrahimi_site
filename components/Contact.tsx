@@ -36,10 +36,7 @@ const Contact: FC = () => {
         >
           <h1 className="text-3xl bold pb-5">Contact Me!</h1>
           <div className="mb-12">
-            <label
-              htmlFor="name"
-              className="mb-3 block text-base font-medium text-black"
-            >
+            <label htmlFor="name" className="mb-3 block text-black">
               Full Name
             </label>
             <input
@@ -50,10 +47,7 @@ const Contact: FC = () => {
             />
           </div>
           <div className="mb-12">
-            <label
-              htmlFor="email"
-              className="mb-3 block text-base font-medium text-black"
-            >
+            <label htmlFor="email" className="mb-3 block text-black">
               Email Address
             </label>
             <input
@@ -64,10 +58,7 @@ const Contact: FC = () => {
             />
           </div>
           <div className="mb-12">
-            <label
-              htmlFor="message"
-              className="mb-3 block text-base font-medium text-black"
-            >
+            <label htmlFor="message" className="mb-3 block text-black">
               Message
             </label>
             <textarea

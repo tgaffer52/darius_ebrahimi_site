@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import "./globals.css";
 import Detective_Death from "../components/Detective_Death";
 import TMDUP from "../components/TMDUP";
@@ -85,7 +84,7 @@ export default function Home() {
   return (
     <main>
       <section>
-        <nav className="flex w-full sticky top-0" ref={headerRef}>
+        <nav className={styles.navbar} ref={headerRef}>
           <button
             type="button"
             onClick={() => {
@@ -200,12 +199,10 @@ export default function Home() {
             </ul>
           </div>
         </nav>
-        <div className="h-28"></div>
       </section>
       <div
         className="flex flex-wrap justify-evenly items-start w-screen min-h-screen py-10"
         id="home"
-        ref={homeRef}
       >
         <a
           onClick={() => {

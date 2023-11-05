@@ -1,17 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&family=Inknut+Antiqua&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Tangerine&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-image: url("/assets/Sunset\ Web\ Background.jpg");
+  background-image: url("/assets/background2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Libre Baskerville", serif;
 }
 
 .nav-container {
@@ -23,7 +32,8 @@ body {
 }
 
 .nav-link {
-  @apply text-white text-sm font-medium;
+  font-family: "Cormorant Garamond", serif;
+  color: white;
 }
 
 .book-cover {
@@ -39,13 +49,23 @@ body {
 .dd {
 }
 
+.dd:hover {
+}
+
 .preview-button {
   position: absolute;
-  bottom: 1rem;
-  right: 6.5rem;
-  height: 6rem;
+  bottom: 50%;
+  right: 42%;
+  margin: 0;
   opacity: 0;
   transition: 1s;
+  background-color: #d99c19;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.preview-button:hover {
+  background-color: #da8027;
 }
 
 .dd:hover .preview-button {
@@ -88,8 +108,23 @@ body {
   max-height: 100vh;
 }
 
+.insta-box {
+}
+.insta-title {
+}
+
+.insta-box:hover .insta-title {
+  color: rgb(182, 20, 20);
+  transition: 0.5s;
+}
+.insta-photo {
+  width: 40%;
+  height: fixed;
+  margin: 0.5rem;
+}
+
 .contact_input {
-  @apply w-full rounded-md border border-gray-800 bg-transparent placeholder:text-gray-600 py-3 px-6 text-base font-medium text-black outline-none focus:border-red-500 focus:shadow-md;
+  @apply w-full rounded-md border border-gray-800 bg-transparent placeholder:text-gray-600 py-3 px-6 text-black outline-none focus:border-red-500 focus:shadow-md;
 }
 
 .contact_btn {
