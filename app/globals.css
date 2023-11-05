@@ -8,7 +8,8 @@ html {
 }
 
 body {
-  background-image: url("/assets/background2.jpg");
+  background-image: url("/assets/centered-sun.jpg");
+  background-position: 36% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -78,7 +78,7 @@ const About = () => {
                 alt=""
               />
               <img
-                src="/assets/instabox/staircase.jpg"
+                src="/assets/instabox/family.jpg"
                 className="insta-photo"
                 alt=""
               />

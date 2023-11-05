@@ -61,12 +61,15 @@ const TMDUP = () => {
         </div>
       </div>
       <div className="description flex flex-col justify-between h-2/3 bg-stone-800 w-1/3 px-5">
-        <h1 className="text-white text-center text-2xl mt-10 leading-loose">
-          DEATH. DUTY. MYTHS. WHAT ELSE COULD SEPARATE KAI FROM HIS TRUE LOVE?
+        <h1 className="text-red-600 text-center text-3xl mt-10 leading-loose">
+          DEATH. DUTY. MYTHS. <br />
+          <h1 className="text-white text-center text-2xl pb-5 border-b-2">
+            WHAT ELSE COULD SEPARATE KAI FROM HIS TRUE LOVE?
+          </h1>
         </h1>
         <div className="dd-reviews pb-5 flex flex-col justify-between text-white">
           <div className="review m-3">
-            <p className="text-xl">
+            <p className="xl:text-xl">
               "A beautifully written page-turner with exquisite world-building
               that is spellbinding, captivating, and completely unique."
             </p>
@@ -74,18 +77,18 @@ const TMDUP = () => {
             -- Indiereader (Starred)
           </div>
           <div className="review m-3">
-            <p className="text-xl">
+            <p className="xl:text-xl">
               "It's only the first installment in the <em>Seed of Yggdrasil</em>{" "}
               series. But it's a strong one that will make readers eager for
               further entries"
             </p>
             <br />
-            -- Kirkus Reviews (Starred)
+            -- Kirkus Reviews
           </div>
           <div className="review m-3">
-            <p className="text-xl">
-              "This is a great story with character growth and questions about
-              what makes a genuine hero."
+            <p className="xl:text-xl">
+              "A great story with character growth and questions about what
+              makes a genuine hero."
             </p>
             <br />
             -- Reader's Favorite (Starred)

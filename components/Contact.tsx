@@ -81,14 +81,23 @@ const Contact: FC = () => {
             alt=""
           />
           <h1 className="text-2xl">Socials!</h1>
-          <a href="" className="contact_btn bg-amber-500 hover:bg-amber-600">
+          <a
+            href="https://www.amazon.com/stores/Darius-Ebrahimi/author/B0B5S9M38N"
+            target="_blank"
+            className="contact_btn bg-amber-500 hover:bg-amber-600"
+          >
             Amazon
           </a>
-          <a href="" className="contact_btn bg-amber-100 hover:bg-amber-200">
+          <a
+            href="https://www.goodreads.com/author/show/22527282.Darius_Ebrahimi"
+            target="_blank"
+            className="contact_btn bg-amber-100 hover:bg-amber-200"
+          >
             Goodreads
           </a>
           <a
-            href=""
+            href="https://www.threads.net/@dariusebrahimi"
+            target="_blank"
             className="contact_btn bg-slate-800 hover:bg-slate-900 text-white"
           >
             Threads
