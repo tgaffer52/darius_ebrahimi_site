@@ -71,17 +71,17 @@ const Detective_Death = () => {
           Your browser does not support the video tag.
         </video>
         <div className="dd-reviews flex justify-evenly text-white">
-          <div className="review w-1/3 m-3">
+          <div className="review text-sm w-1/3 m-3">
             <p>"A truly original mystery that is humorous, clever, and fun."</p>
             <br />
             <p>-- Reader's Favorite (Starred)</p>
           </div>
-          <div className="review w-1/3 m-3">
+          <div className="review text-sm w-1/3 m-3">
             <p>"A sublimely bizarre detective story"</p>
             <br />
             <p>-- Kirkus Reviews (Starred)</p>
           </div>
-          <div className="review w-1/3 m-3">
+          <div className="review text-sm w-1/3 m-3">
             <p>
               "<em>Detective Death</em> manages the impressive feat of living up
               to such a memorable title
