@@ -4,23 +4,6 @@ import React, { forwardRef, useState } from "react";
 import ReactModal from "react-modal";
 
 const Detective_Death = (props, dDRef) => {
-  const [preview, setPreview] = useState(false);
-
-  function ddHandleClick(event) {
-    setPreview(!preview);
-  }
-
-  const customStyles = {
-    overlay: {
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
-    },
-    content: {
-      width: "50%",
-      margin: "auto",
-      background: "rgba(0, 0, 0, 0.5)",
-    },
-  };
-
   // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
   ReactModal.setAppElement("#detective-death");
 
@@ -52,8 +35,9 @@ const Detective_Death = (props, dDRef) => {
           <ReactModal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
-            style={customStyles}
             contentLabel="Detective Death Preview"
+            className="content"
+            overlayClassName="overlay"
           >
             <iframe
               src="/assets/dd_preview.pdf"

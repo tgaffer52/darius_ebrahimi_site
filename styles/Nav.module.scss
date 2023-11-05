@@ -37,7 +37,34 @@
   right: 5rem;
 }
 
-.navLinks {
+.navRight {
   position: fixed;
   right: 0px;
+  top: 0px;
+
+  .navLinks {
+    @apply bg-gray-700/75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 0px;
+  }
+}
+
+.nav-container {
+  @apply w-full text-center hover:bg-red-700/75 rounded-md px-3 py-2;
+}
+
+.nav-active {
+  @apply w-full text-center bg-red-700/75 rounded-md px-3 py-2;
+}
+
+.nav-link {
+  @apply text-white text-sm font-medium;
+}
+
+.subnav {
+  @apply bg-gray-700/75 absolute w-44 list-none;
+  right: 85px;
+  top: 0px;
 }

@@ -3,16 +3,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
 import Detective_Death from "../components/Detective_Death";
 import TMDUP from "../components/TMDUP";
 import About from "../components/About";
 import Contact from "../components/Contact";
-import Homepage from "../components/Homepage";
-import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import styles from "../components/Nav.module.scss";
+import styles from "../styles/Nav.module.scss";
 // import { Link, animateScroll as scroll } from "react-scroll";
 
 const getDimensions = (ele) => {
@@ -35,7 +31,6 @@ const scrollTo = (ele) => {
 };
 
 export default function Home() {
-  const router = useRouter();
   const homeRef = useRef(null);
   const dDRef = useRef(null);
   const tMDUPRef = useRef(null);
@@ -46,7 +41,6 @@ export default function Home() {
   const [visibleSection, setVisibleSection] = useState();
 
   const sectionRefs = [
-    { section: "home", ref: homeRef },
     { section: "dd", ref: dDRef },
     { section: "tmdup", ref: tMDUPRef },
     { section: "about", ref: aboutRef },
@@ -91,11 +85,7 @@ export default function Home() {
   return (
     <main>
       <section>
-        <nav
-          className="flex w-full sticky top-0"
-          ref={headerRef}
-          onMouseLeave={() => setSubnav(false)}
-        >
+        <nav className="flex w-full sticky top-0" ref={headerRef}>
           <button
             type="button"
             onClick={() => {
@@ -114,8 +104,11 @@ export default function Home() {
             </h1>
             <h4 className="text-center">Fantasy Author</h4>
           </div>
-          <div className={styles.navLinks}>
-            <ul className="nav-links relative flex flex-col justify-evenly bg-gray-700/75 pb-0">
+          <div
+            className={styles.navRight}
+            onMouseLeave={() => setSubnav(false)}
+          >
+            <ul className={styles.navLinks}>
               <ul
                 className={
                   visibleSection === "dd" || visibleSection === "tmdup"
@@ -125,7 +118,7 @@ export default function Home() {
               >
                 {subnav ? (
                   <>
-                    <div className="bg-gray-700/75 absolute w-44 right-24 list-none">
+                    <div className={styles.subnav}>
                       <li
                         className={
                           visibleSection === "dd"
@@ -169,6 +162,7 @@ export default function Home() {
                     showSubnav();
                   }}
                   className="nav-link"
+                  onMouseEnter={() => setSubnav(true)}
                 >
                   BOOKS
                 </button>
