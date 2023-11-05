@@ -1,16 +1,18 @@
 .logo {
   object-fit: cover;
   height: 6.8rem;
+  position: fixed;
+  top: 0px;
 }
 
 .title {
-  @apply grow;
+  @apply grow sticky top-0;
 
   h1 {
     font-family: serif;
     font-size: 3rem;
     font-weight: 600;
-    background: -webkit-linear-gradient(45deg, #ff0000, #000000, #ef0000);
+    background: -webkit-linear-gradient(#ff0000, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 50%;
@@ -24,8 +26,8 @@
 
   .feather {
     display: inline;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin: 0px -13px 4px -10px;
+    rotate: -8deg;
     height: 3rem;
   }
 }
@@ -33,4 +35,9 @@
 .subNav {
   position: absolute;
   right: 5rem;
+}
+
+.navLinks {
+  position: fixed;
+  right: 0px;
 }

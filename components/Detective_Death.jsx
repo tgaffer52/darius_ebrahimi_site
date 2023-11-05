@@ -1,22 +1,80 @@
 "use client";
 
-import React, { useRef, useEffect, forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
+import ReactModal from "react-modal";
 
 const Detective_Death = (props, dDRef) => {
+  const [preview, setPreview] = useState(false);
+
+  function ddHandleClick(event) {
+    setPreview(!preview);
+  }
+
+  const customStyles = {
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+    },
+    content: {
+      width: "50%",
+      margin: "auto",
+      background: "rgba(0, 0, 0, 0.5)",
+    },
+  };
+
+  // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+  ReactModal.setAppElement("#detective-death");
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   return (
     <section
       id="detective-death"
-      className="h-screen w-screen flex justify-evenly items-center"
+      className="h-screen w-screen flex justify-center items-center"
       ref={dDRef}
     >
-      <img
-        src="/assets/Detective Death Cover.png"
-        alt="Detective Death"
-        className="h-2/3"
-      />
-      <div className="description flex flex-col justify-between h-2/3 bg-stone-800 w-1/3 px-5">
+      <div className="h-2/3 flex flex-col mr-36">
+        <div className="h-full relative dd" onClick={openModal}>
+          <img
+            src="/assets/dd_3d.png"
+            alt="Detective Death"
+            className="h-full"
+          />
+          <img src="../assets/Preview.png" alt="" className="preview-button" />
+        </div>
+        <div>
+          <ReactModal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Detective Death Preview"
+          >
+            <iframe
+              src="/assets/dd_preview.pdf"
+              height="100%"
+              width="100%"
+            ></iframe>
+          </ReactModal>
+        </div>
+        <div className="flex">
+          <a
+            href="https://www.amazon.com/Detective-Death-Scarlett-Mythical-Mysteries/dp/B0C2RPJ9RX/ref=sr_1_1?keywords=detective+death&qid=1698999137&sr=8-1"
+            target="_blank"
+            className="bg-amber-500 hover:bg-amber-600 contact_btn mx-auto"
+          >
+            Buy on Amazon
+          </a>
+        </div>
+      </div>
+      <div className="description flex flex-col justify-evenly h-2/3 bg-stone-800 w-1/3 px-5">
         <h1 className="text-white font-serif text-center text-2xl mt-10 leading-loose">
-          A DEATH HUNTS FOR KILLERS, MYTHS, AND A NEW START
+          A DEATH GOD HUNTS FOR KILLERS, MYTHS, AND A NEW START
         </h1>
         <video className="w-full" controls>
           <source src="assets/DD_Video.webm" type="video/webm" />

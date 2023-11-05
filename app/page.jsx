@@ -3,8 +3,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./globals.css";
-import Instagram from "instagram-web-api";
-
 import Image from "next/image";
 import Link from "next/link";
 import Detective_Death from "../components/Detective_Death";
@@ -94,7 +92,7 @@ export default function Home() {
     <main>
       <section>
         <nav
-          className="flex w-full fixed top-0"
+          className="flex w-full sticky top-0"
           ref={headerRef}
           onMouseLeave={() => setSubnav(false)}
         >
@@ -116,7 +114,7 @@ export default function Home() {
             </h1>
             <h4 className="text-center">Fantasy Author</h4>
           </div>
-          <div className="nav-right relative">
+          <div className={styles.navLinks}>
             <ul className="nav-links relative flex flex-col justify-evenly bg-gray-700/75 pb-0">
               <ul
                 className={
@@ -210,8 +208,35 @@ export default function Home() {
         </nav>
         <div className="h-28"></div>
       </section>
-      <div ref={homeRef}>
-        <Homepage />
+      <div
+        className="flex flex-wrap justify-evenly items-start w-screen min-h-screen py-10"
+        id="home"
+        ref={homeRef}
+      >
+        <a
+          onClick={() => {
+            scrollTo(dDRef.current);
+          }}
+          className="mt-0 p-0"
+        >
+          <img
+            src="/assets/Detective Death Cover.png"
+            alt="Detective Death"
+            className="book-cover"
+          />
+        </a>
+        <a
+          onClick={() => {
+            scrollTo(tMDUPRef.current);
+          }}
+          className="nav-link"
+        >
+          <img
+            src="/assets/TMDUP.jpg"
+            alt="Till Myth Do Us Part"
+            className="book-cover"
+          />
+        </a>
       </div>
       <div ref={dDRef}>
         <Detective_Death />

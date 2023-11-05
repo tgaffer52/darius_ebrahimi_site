@@ -29,10 +29,13 @@ const Contact: FC = () => {
       id="contact"
       className="min-h-screen w-screen flex flex-col justify-center items-center"
     >
-      <div className="w-3/4 flex my-auto justify-evenly bg-white/50 p-8">
-        <form onSubmit={handleSubmit(onSubmit)} className="w-1/2">
+      <div className="w-3/4 flex my-auto justify-evenly bg-white/60 p-8">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="w-1/2 flex flex-col justify-evenly"
+        >
           <h1 className="text-3xl bold pb-5">Contact Me!</h1>
-          <div className="mb-5">
+          <div className="mb-12">
             <label
               htmlFor="name"
               className="mb-3 block text-base font-medium text-black"
@@ -46,7 +49,7 @@ const Contact: FC = () => {
               {...register("name", { required: true })}
             />
           </div>
-          <div className="mb-5">
+          <div className="mb-12">
             <label
               htmlFor="email"
               className="mb-3 block text-base font-medium text-black"
@@ -60,7 +63,7 @@ const Contact: FC = () => {
               {...register("email", { required: true })}
             />
           </div>
-          <div className="mb-5">
+          <div className="mb-12">
             <label
               htmlFor="message"
               className="mb-3 block text-base font-medium text-black"
@@ -68,7 +71,7 @@ const Contact: FC = () => {
               Message
             </label>
             <textarea
-              rows={4}
+              rows={8}
               placeholder="Type your message"
               className="contact_input"
               {...register("message", { required: true })}
@@ -81,7 +84,11 @@ const Contact: FC = () => {
           </div>
         </form>
         <div className="socials text-center w-1/3 lg:w-1/4">
-          <img src="../assets/ivy.jpg" className="w-full pb-5 mx-auto" alt="" />
+          <img
+            src="../assets/holding_ivy.jpg"
+            className="w-full pb-3 mx-auto"
+            alt=""
+          />
           <h1 className="text-2xl">Socials!</h1>
           <a href="" className="contact_btn bg-amber-500 hover:bg-amber-600">
             Amazon

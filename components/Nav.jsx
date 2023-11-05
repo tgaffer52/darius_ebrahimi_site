@@ -15,7 +15,7 @@ const Nav = () => {
   };
   return (
     <section>
-      <nav className="flex w-full fixed top-0">
+      <nav className="sticky flex w-full top-0">
         <button type="button" onClick={scrollToTop}>
           <img src="/assets/logo.png" className={styles.logo} alt="logo" />
         </button>
