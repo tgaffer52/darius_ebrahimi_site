@@ -15,24 +15,24 @@ import {
   Cormorant_Garamond,
 } from "next/font/google";
 
-export const baskerville = Libre_Baskerville({
+const baskerville = Libre_Baskerville({
   subsets: ["latin"],
   style: ["normal", "italic"],
   weight: "400",
   variable: "--font-baskerville",
 });
 
-export const inknut = Inknut_Antiqua({
+const inknut = Inknut_Antiqua({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-inknut",
 });
 
-export const cinzel = Cinzel({
+const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-cinzel",
 });
-export const garamond = Cormorant_Garamond({
+const garamond = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-garamond",
   weight: "400",
