@@ -21,46 +21,22 @@ const About = () => {
         <div className="w-1/2">
           <div ref={sliderRef} className="keen-slider m-12">
             <div className="keen-slider__slide">
-              <img
-                src="/assets/carousel/carousel1.jpg"
-                className=""
-                alt="carousel1"
-              />
+              <img src="/assets/carousel/carousel1.jpg" alt="carousel1" />
             </div>
             <div className="keen-slider__slide">
-              <img
-                src="/assets/carousel/carousel2.jpg"
-                className=""
-                alt="carousel2"
-              />
+              <img src="/assets/carousel/carousel2.jpg" alt="carousel2" />
             </div>
             <div className="keen-slider__slide">
-              <img
-                src="/assets/carousel/carousel3.jpg"
-                className=""
-                alt="carousel3"
-              />
+              <img src="/assets/carousel/carousel3.jpg" alt="carousel3" />
             </div>
             <div className="keen-slider__slide">
-              <img
-                src="/assets/carousel/carousel4.jpg"
-                className=""
-                alt="carousel4"
-              />
+              <img src="/assets/carousel/carousel4.jpg" alt="carousel4" />
             </div>
             <div className="keen-slider__slide">
-              <img
-                src="/assets/carousel/carousel5.jpg"
-                className=""
-                alt="carousel5"
-              />
+              <img src="/assets/carousel/carousel5.jpg" alt="carousel5" />
             </div>
             <div className="keen-slider__slide">
-              <img
-                src="/assets/carousel/carousel6.jpg"
-                className=""
-                alt="carousel6"
-              />
+              <img src="/assets/carousel/carousel6.jpg" alt="carousel6" />
             </div>
           </div>
         </div>
@@ -70,7 +46,7 @@ const About = () => {
           className="w-1/5 insta-box"
         >
           <div className="bg-white text-center py-3">
-            <h1 class="insta-title">-FIND ME ON INSTAGRAM-</h1>
+            <h1 className="insta-title">-FIND ME ON INSTAGRAM-</h1>
             <div className="flex flex-wrap items-center justify-evenly">
               <img
                 src="/assets/instabox/lightsaber_ivy.jpg"

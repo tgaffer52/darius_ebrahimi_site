@@ -21,11 +21,14 @@
     "font-awesome": "^4.7.0",
     "forever-agent": "^0.6.1",
     "fs": "^0.0.1-security",
+    "g": "^2.0.1",
     "keen-slider": "^6.8.6",
+    "n": "^9.2.0",
     "net": "^1.0.2",
-    "next": "13.5.4",
+    "next": "^14.0.1",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.6",
+    "npm": "^10.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
@@ -33,7 +36,8 @@
     "react-responsive-carousel": "^3.2.23",
     "react-scroll": "^1.9.0",
     "react-scrollspy": "^3.4.3",
-    "tls": "^0.0.1"
+    "tls": "^0.0.1",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@types/node": "20.8.7",
