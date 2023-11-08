@@ -51,32 +51,32 @@ const About = () => {
               <img
                 src="/assets/instabox/lightsaber_ivy.jpg"
                 className="insta-photo"
-                alt=""
+                alt="insta-photo"
               />
               <img
                 src="/assets/instabox/family.jpg"
                 className="insta-photo"
-                alt=""
+                alt="insta-photo"
               />
               <img
                 src="/assets/instabox/headshot.jpg"
                 className="insta-photo"
-                alt=""
+                alt="insta-photo"
               />
               <img
                 src="/assets/instabox/book-castle.jpg"
                 className="insta-photo"
-                alt=""
+                alt="insta-photo"
               />
               <img
                 src="/assets/instabox/vegas.jpg"
                 className="insta-photo"
-                alt=""
+                alt="insta-photo"
               />
               <img
                 src="assets/instabox/ivy.jpg"
                 className="insta-photo"
-                alt=""
+                alt="insta-photo"
               />
             </div>
           </div>

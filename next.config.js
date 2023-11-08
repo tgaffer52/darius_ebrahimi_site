@@ -2,6 +2,9 @@
 const nextConfig = {};
 
 module.exports = {
+  experimental: {
+    webpackBuildWorker: true,
+  },
   // webpack5: true,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };

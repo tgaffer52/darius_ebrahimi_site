@@ -15,10 +15,6 @@ body {
   min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4,
 p {
   font-family: var(--font-baskerville), serif;
 }
@@ -77,6 +73,11 @@ a {
   transition: 1s;
 }
 
+.description-title {
+  @apply text-white text-center text-2xl mt-10 leading-loose pb-3 border-b-2;
+  font-family: var(--font-baskerville), serif;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -115,6 +116,7 @@ a {
 .insta-box {
 }
 .insta-title {
+  font-family: var(--font-baskerville), serif;
 }
 
 .insta-box:hover .insta-title {

@@ -63,7 +63,7 @@ const Detective_Death = () => {
         </div>
       </div>
       <div className="description flex flex-col justify-evenly h-2/3 bg-stone-800 w-1/3 px-5">
-        <h1 className="text-white text-center text-2xl mt-10 leading-loose pb-3 border-b-2">
+        <h1 className="description-title">
           A DEATH GOD HUNTS FOR KILLERS, MYTHS, AND A NEW START
         </h1>
         <video className="w-full pt-5" controls>

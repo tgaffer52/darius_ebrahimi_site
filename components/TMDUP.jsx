@@ -63,7 +63,7 @@ const TMDUP = () => {
       <div className="description flex flex-col justify-between h-2/3 bg-stone-800 w-1/3 px-5">
         <h1 className="text-red-600 text-center text-3xl mt-10 leading-loose">
           DEATH. DUTY. MYTHS. <br />
-          <h1 className="text-white text-center text-2xl pb-5 border-b-2">
+          <h1 className="description-title">
             WHAT ELSE COULD SEPARATE KAI FROM HIS TRUE LOVE?
           </h1>
         </h1>
