@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&family=Inknut+Antiqua&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Tangerine&display=swap");
 
 html {
   scroll-behavior: smooth;

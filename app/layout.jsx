@@ -1,6 +1,11 @@
 import React from "react";
 import "./globals.css";
-import { Libre_Baskerville, Inknut_Antiqua, Cinzel } from "next/font/google";
+import {
+  Libre_Baskerville,
+  Inknut_Antiqua,
+  Cinzel,
+  Cormorant_Garamond,
+} from "next/font/google";
 // import { config } from "@fortawesome/fontawesome-svg-core";
 // import "@fortawesome/fontawesome-svg-core/styles.css";
 // config.autoAddCss = false;
@@ -8,22 +13,23 @@ import { Libre_Baskerville, Inknut_Antiqua, Cinzel } from "next/font/google";
 export const baskerville = Libre_Baskerville({
   subsets: ["latin"],
   style: ["normal", "italic"],
-  display: "swap",
   weight: "400",
   variable: "--font-baskerville",
 });
 
 export const inknut = Inknut_Antiqua({
   subsets: ["latin"],
-  display: "swap",
   weight: "400",
   variable: "--font-inknut",
 });
 
 export const cinzel = Cinzel({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-cinzel",
+});
+export const garamond = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-garamond",
 });
 
 export const metadata = {
