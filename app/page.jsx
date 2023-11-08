@@ -2,12 +2,41 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import "./globals.css";
+import styles from "../styles/Nav.module.scss";
 import Detective_Death from "../components/Detective_Death";
 import TMDUP from "../components/TMDUP";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import styles from "../styles/Nav.module.scss";
+import {
+  Libre_Baskerville,
+  Inknut_Antiqua,
+  Cinzel,
+  Cormorant_Garamond,
+} from "next/font/google";
+
+export const baskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: "400",
+  variable: "--font-baskerville",
+});
+
+export const inknut = Inknut_Antiqua({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-inknut",
+});
+
+export const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+});
+export const garamond = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-garamond",
+  weight: "400",
+});
 // import { Link, animateScroll as scroll } from "react-scroll";
 
 const getDimensions = (ele) => {
@@ -82,8 +111,8 @@ export default function Home() {
   };
 
   return (
-    <main>
-      <section>
+    <main className={baskerville.className}>
+      <section className={inknut.className}>
         <nav className={styles.navbar} ref={headerRef}>
           <button
             type="button"
@@ -101,13 +130,15 @@ export default function Home() {
               </span>{" "}
               US EBRAHIMI
             </h1>
-            <h4 className="text-center">Fantasy Author</h4>
+            <div className={cinzel.className}>
+              <h4 className="text-center">Fantasy Author</h4>
+            </div>
           </div>
           <div
             className={styles.navRight}
             onMouseLeave={() => setSubnav(false)}
           >
-            <ul className={styles.navLinks}>
+            <ul className={styles.navLinks + " " + garamond.className}>
               <ul
                 className={
                   visibleSection === "dd" || visibleSection === "tmdup"

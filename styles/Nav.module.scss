@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&family=Inknut+Antiqua&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Tangerine&display=swap");
-
 .logo {
   object-fit: cover;
   height: 6.8rem;
@@ -11,7 +9,7 @@
   @apply grow sticky top-0;
 
   h1 {
-    font-family: "Inknut Antiqua", serif;
+    font-family: var(--font-inknut), serif;
     font-size: 3rem;
     font-weight: 600;
     background: -webkit-linear-gradient(#ff0000, #000000);
@@ -22,7 +20,7 @@
 
   h4 {
     font-size: 1.5rem;
-    font-family: "Cinzel", serif;
+    font-family: var(--font-cinzel), serif;
     font-weight: bold;
   }
 
@@ -41,10 +39,10 @@
   padding-bottom: 80px;
 }
 
-.subNav {
-  position: absolute;
-  right: 5rem;
-}
+// .subnav {
+//   position: absolute;
+//   right: 7rem;
+// }
 
 .navRight {
   position: fixed;
@@ -74,6 +72,6 @@
 
 .subnav {
   @apply bg-gray-700/75 absolute w-44 list-none;
-  right: 6rem;
+  right: 6.2rem;
   top: 0px;
 }

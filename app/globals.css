@@ -20,7 +20,11 @@ h2,
 h3,
 h4,
 p {
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-baskerville), serif;
+}
+
+a {
+  cursor: pointer;
 }
 
 .nav-container {
@@ -32,7 +36,7 @@ p {
 }
 
 .nav-link {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-garamond), serif;
   color: white;
 }
 

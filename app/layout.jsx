@@ -30,6 +30,7 @@ export const cinzel = Cinzel({
 export const garamond = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-garamond",
+  weight: "400",
 });
 
 export const metadata = {
