@@ -48,11 +48,11 @@
 }
 
 .navContainer {
-  @apply w-full text-center hover:bg-red-700/75 rounded-md px-3 py-2;
+  @apply w-full text-center hover:bg-red-700/75 px-3 py-2;
 }
 
 .navActive {
-  @apply w-full text-center bg-red-700/75 rounded-md px-3 py-2;
+  @apply w-full text-center bg-red-700/75 px-3 py-2;
 }
 
 .navLink {

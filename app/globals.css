@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url("/assets/centered-sun.jpg");
+  background-image: url(https://res.cloudinary.com/dh2hxvsxw/image/upload/v1699538285/darius_website/sun.jpg);
   background-position: 36% 50%;
   background-size: cover;
   background-repeat: no-repeat;

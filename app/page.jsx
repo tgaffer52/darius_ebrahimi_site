@@ -129,6 +129,8 @@ export default function Home() {
   const title = cld.image("darius_website/title");
   const dd = cld.image("darius_website/DD");
   const tmdup = cld.image("darius_website/TMDUP");
+  const sun = cld.image("darius_website/sun");
+  console.log(sun);
 
   return (
     <main className={`${baskerville.className} container`}>
