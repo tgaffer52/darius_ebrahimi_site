@@ -41,7 +41,9 @@ const About = () => {
       id="about"
       className="min-h-screen w-screen flex flex-col justify-evenly"
     >
-      <h1 className="text-center text-3xl pt-8">About Darius</h1>
+      <h1 className="w-3/4 mx-auto text-center text-3xl pt-8 serif">
+        About Darius Ebrahimi
+      </h1>
       <div className="flex flex-wrap justify-evenly items-center">
         <div className="w-full md:w-3/5 lg:w-1/2 p-8">
           <div ref={sliderRef} className="keen-slider">
@@ -68,11 +70,11 @@ const About = () => {
         <a
           href="https://www.instagram.com/dariusebrahimi"
           target="_blank"
-          className="md:w-1/5 insta-box mx-8"
+          className="w-full md:w-1/5 insta-box mx-8"
         >
-          <div className="bg-white text-center py-3">
+          <div className="w-full bg-white text-center py-3">
             <h3 className="insta-title">-FIND ME ON INSTAGRAM-</h3>
-            <div className="flex md:flex-wrap items-center justify-evenly">
+            <div className="flex md:flex-wrap items-center justify-evenly px-2">
               <AdvancedImage
                 cldImg={lightsaberIvy}
                 className="insta-photo"
@@ -90,17 +92,17 @@ const About = () => {
               />
               <AdvancedImage
                 cldImg={bookCastle}
-                className="insta-photo hidden md:block"
+                className="insta-photo"
                 alt="insta-photo"
               />
               <AdvancedImage
                 cldImg={vegas}
-                className="insta-photo hidden md:block"
+                className="insta-photo"
                 alt="insta-photo"
               />
               <AdvancedImage
                 cldImg={ivy}
-                className="insta-photo hidden md:block"
+                className="insta-photo hidden sm:block"
                 alt="insta-photo"
               />
             </div>
