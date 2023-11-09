@@ -111,8 +111,8 @@ export default function Home() {
   };
 
   return (
-    <main className={baskerville.className}>
-      <section className={inknut.className}>
+    <main className={`${baskerville.className} container`}>
+      <div>
         <nav className={styles.navbar} ref={headerRef}>
           <button
             type="button"
@@ -123,13 +123,11 @@ export default function Home() {
             <img src="/assets/logo.png" className={styles.logo} alt="logo" />
           </button>
           <div className={styles.title}>
-            <h1 className="text-center">
-              DAR{" "}
-              <span>
-                <img src="/assets/feather.png" className={styles.feather} />
-              </span>{" "}
-              US EBRAHIMI
-            </h1>
+            <img
+              src="/assets/title.png"
+              alt="darius ebrahimi"
+              className="m-auto"
+            />
             <div className={cinzel.className}>
               <h4 className="text-center">Fantasy Author</h4>
             </div>
@@ -142,8 +140,8 @@ export default function Home() {
               <ul
                 className={
                   visibleSection === "dd" || visibleSection === "tmdup"
-                    ? "nav-active"
-                    : "nav-container"
+                    ? styles.navActive
+                    : styles.navContainer
                 }
               >
                 {subnav ? (
@@ -152,16 +150,17 @@ export default function Home() {
                       <li
                         className={
                           visibleSection === "dd"
-                            ? "nav-active"
-                            : "nav-container"
+                            ? styles.navActive
+                            : styles.navContainer
                         }
                       >
                         <button
                           type="button"
                           onClick={() => {
                             scrollTo(dDRef.current);
+                            setSubnav(false);
                           }}
-                          className="nav-link"
+                          className={styles.navLink}
                         >
                           DETECTIVE DEATH
                         </button>
@@ -169,16 +168,17 @@ export default function Home() {
                       <li
                         className={
                           visibleSection === "tmdup"
-                            ? "nav-active"
-                            : "nav-container"
+                            ? styles.navActive
+                            : styles.navContainer
                         }
                       >
                         <button
                           type="button"
                           onClick={() => {
                             scrollTo(tMDUPRef.current);
+                            setSubnav(false);
                           }}
-                          className="nav-link"
+                          className={styles.navLink}
                         >
                           TILL MYTH DO US PART
                         </button>
@@ -191,7 +191,7 @@ export default function Home() {
                   onClick={() => {
                     showSubnav();
                   }}
-                  className="nav-link"
+                  className={styles.navLink}
                   onMouseEnter={() => setSubnav(true)}
                 >
                   BOOKS
@@ -199,7 +199,9 @@ export default function Home() {
               </ul>
               <li
                 className={
-                  visibleSection === "about" ? "nav-active" : "nav-container"
+                  visibleSection === "about"
+                    ? styles.navActive
+                    : styles.navContainer
                 }
               >
                 <button
@@ -207,14 +209,16 @@ export default function Home() {
                   onClick={() => {
                     scrollTo(aboutRef.current);
                   }}
-                  className="nav-link"
+                  className={styles.navLink}
                 >
                   ABOUT
                 </button>
               </li>
               <li
                 className={
-                  visibleSection === "contact" ? "nav-active" : "nav-container"
+                  visibleSection === "contact"
+                    ? styles.navActive
+                    : styles.navContainer
                 }
               >
                 <button
@@ -222,7 +226,7 @@ export default function Home() {
                   onClick={() => {
                     scrollTo(contactRef.current);
                   }}
-                  className="nav-link"
+                  className={styles.navLink}
                 >
                   CONTACT
                 </button>
@@ -230,7 +234,8 @@ export default function Home() {
             </ul>
           </div>
         </nav>
-      </section>
+      </div>
+
       <div
         className="flex flex-wrap justify-evenly items-start w-screen min-h-screen py-10"
         id="home"
@@ -251,7 +256,7 @@ export default function Home() {
           onClick={() => {
             scrollTo(tMDUPRef.current);
           }}
-          className="nav-link"
+          className={styles.navLink}
         >
           <img
             src="/assets/TMDUP.jpg"
@@ -260,6 +265,7 @@ export default function Home() {
           />
         </a>
       </div>
+      <div className="border-black w-3/4"></div>
       <div ref={dDRef}>
         <Detective_Death />
       </div>

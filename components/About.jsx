@@ -13,13 +13,14 @@ const About = () => {
     },
   });
   return (
-    <section
+    <div
       id="about"
-      className="min-h-screen w-screen justify-evenly items-center"
+      className="min-h-screen w-screen flex flex-col justify-evenly"
     >
-      <div className="flex justify-evenly items-center">
-        <div className="w-1/2">
-          <div ref={sliderRef} className="keen-slider m-12">
+      <h1 className="text-center text-3xl pt-8">About Darius</h1>
+      <div className="flex flex-wrap justify-evenly items-center">
+        <div className="w-full md:w-3/5 lg:w-1/2 p-8">
+          <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide">
               <img src="/assets/carousel/carousel1.jpg" alt="carousel1" />
             </div>
@@ -43,11 +44,11 @@ const About = () => {
         <a
           href="https://www.instagram.com/dariusebrahimi"
           target="_blank"
-          className="w-1/5 insta-box"
+          className="md:w-1/5 insta-box mx-8"
         >
           <div className="bg-white text-center py-3">
-            <h1 className="insta-title">-FIND ME ON INSTAGRAM-</h1>
-            <div className="flex flex-wrap items-center justify-evenly">
+            <h3 className="insta-title">-FIND ME ON INSTAGRAM-</h3>
+            <div className="flex md:flex-wrap items-center justify-evenly">
               <img
                 src="/assets/instabox/lightsaber_ivy.jpg"
                 className="insta-photo"
@@ -70,19 +71,19 @@ const About = () => {
               />
               <img
                 src="/assets/instabox/vegas.jpg"
-                className="insta-photo"
+                className="insta-photo hidden md:block"
                 alt="insta-photo"
               />
               <img
                 src="assets/instabox/ivy.jpg"
-                className="insta-photo"
+                className="insta-photo hidden md:block"
                 alt="insta-photo"
               />
             </div>
           </div>
         </a>
       </div>
-      <div className="m-16 bg-white/75">
+      <div className="m-8 bg-white/75">
         <p className="text-xl leading-loose p-5">
           Winner of the 2023 IndieReader Discovery Award for Fantasy. Darius
           Ebrahimi is inspired by mythology, his Persian-American heritage, and
@@ -93,7 +94,7 @@ const About = () => {
           is working on his next book.
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 

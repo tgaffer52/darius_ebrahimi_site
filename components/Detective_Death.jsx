@@ -17,11 +17,11 @@ const Detective_Death = () => {
     setIsOpen(false);
   }
   return (
-    <section
+    <div
       id="detective-death"
-      className="h-screen w-screen flex justify-center items-center"
+      className="min-h-screen min-w-screen flex flex-wrap justify-evenly items-center py-16"
     >
-      <div className="h-2/3 flex flex-col mr-36">
+      <div className="lg:w-1/3 flex flex-col items-center">
         <div className="h-full relative dd">
           <img
             src="/assets/dd_3d.png"
@@ -52,7 +52,7 @@ const Detective_Death = () => {
             ></iframe>
           </ReactModal>
         </div>
-        <div className="flex">
+        <div className="flex justify-center">
           <a
             href="https://a.co/d/flBuUDM"
             target="_blank"
@@ -62,36 +62,40 @@ const Detective_Death = () => {
           </a>
         </div>
       </div>
-      <div className="description flex flex-col justify-evenly h-2/3 bg-stone-800 w-1/3 px-5">
+      <div className="description">
         <h1 className="description-title">
           A DEATH GOD HUNTS FOR KILLERS, MYTHS, AND A NEW START
         </h1>
-        <video className="w-full pt-5" controls>
+        <video className="h-full pt-5" controls>
           <source src="assets/DD_Video.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        <div className="dd-reviews flex justify-evenly text-white">
-          <div className="review text-sm w-1/3 m-3">
-            <p>"A truly original mystery that is humorous, clever, and fun."</p>
-            <br />
-            <p>-- Reader's Favorite (Starred)</p>
+        <div className="dd-reviews py-5 md:flex grow justify-evenly text-white">
+          <div className="dd-review">
+            <p>
+              "A truly original mystery that is humorous, clever, and fun."
+              <br />
+              <p className="text-end italic">-- Reader's Favorite (Starred)</p>
+            </p>
           </div>
-          <div className="review text-sm w-1/3 m-3">
-            <p>"A sublimely bizarre detective story"</p>
-            <br />
-            <p>-- Kirkus Reviews (Starred)</p>
+          <div className="dd-review">
+            <p>
+              "A sublimely bizarre detective story"
+              <br />
+              <p className="text-end italic">-- Kirkus Reviews (Starred)</p>
+            </p>
           </div>
-          <div className="review text-sm w-1/3 m-3">
+          <div className="dd-review">
             <p>
               "<em>Detective Death</em> manages the impressive feat of living up
               to such a memorable title
+              <br />
+              <p className="text-end italic">-- Indiereader</p>
             </p>
-            <br />
-            <p>-- Indiereader</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

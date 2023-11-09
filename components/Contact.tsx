@@ -29,12 +29,12 @@ const Contact: FC = () => {
       id="contact"
       className="min-h-screen w-screen flex flex-col justify-center items-center"
     >
-      <div className="w-3/4 flex my-auto justify-evenly bg-white/60 p-8">
+      <div className="lg:w-3/4 md:flex my-auto justify-evenly bg-white/60 m-8 p-5">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-1/2 flex flex-col justify-evenly"
+          className="lg:w-1/2 flex flex-col justify-evenly"
         >
-          <h1 className="text-3xl bold pb-5">Contact Me!</h1>
+          <h1 className="text-3xl text-center bold py-8">Contact Me!</h1>
           <div className="mb-12">
             <label htmlFor="name" className="mb-3 block text-black">
               Full Name
@@ -74,34 +74,36 @@ const Contact: FC = () => {
             </button>
           </div>
         </form>
-        <div className="socials text-center w-1/3 lg:w-1/4">
+        <div className="flex md:flex-col justify-evenly items-center text-center md:w-1/3 xl:w-1/4">
           <img
             src="../assets/holding_ivy.jpg"
-            className="w-full pb-3 mx-auto"
+            className="w-1/4 md:w-full pb-3 md:mx-auto"
             alt=""
           />
-          <h1 className="text-2xl">Socials!</h1>
-          <a
-            href="https://www.amazon.com/stores/Darius-Ebrahimi/author/B0B5S9M38N"
-            target="_blank"
-            className="contact_btn bg-amber-500 hover:bg-amber-600"
-          >
-            Amazon
-          </a>
-          <a
-            href="https://www.goodreads.com/author/show/22527282.Darius_Ebrahimi"
-            target="_blank"
-            className="contact_btn bg-amber-100 hover:bg-amber-200"
-          >
-            Goodreads
-          </a>
-          <a
-            href="https://www.threads.net/@dariusebrahimi"
-            target="_blank"
-            className="contact_btn bg-slate-800 hover:bg-slate-900 text-white"
-          >
-            Threads
-          </a>
+          <div className="socials pb-8">
+            <h1 className="text-2xl">Socials!</h1>
+            <a
+              href="https://www.amazon.com/stores/Darius-Ebrahimi/author/B0B5S9M38N"
+              target="_blank"
+              className="contact_btn bg-amber-500 hover:bg-amber-600"
+            >
+              Amazon
+            </a>
+            <a
+              href="https://www.goodreads.com/author/show/22527282.Darius_Ebrahimi"
+              target="_blank"
+              className="contact_btn bg-amber-100 hover:bg-amber-200"
+            >
+              Goodreads
+            </a>
+            <a
+              href="https://www.threads.net/@dariusebrahimi"
+              target="_blank"
+              className="contact_btn bg-slate-800 hover:bg-slate-900 text-white"
+            >
+              Threads
+            </a>
+          </div>
         </div>
       </div>
     </section>

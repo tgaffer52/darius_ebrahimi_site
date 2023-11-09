@@ -17,9 +17,9 @@ const TMDUP = () => {
   return (
     <section
       id="tmdup"
-      className="h-screen w-screen flex justify-center items-center"
+      className="min-h-screen min-w-screen flex flex-wrap justify-evenly items-center"
     >
-      <div className="h-2/3 flex flex-col mr-36">
+      <div className="lg:w-1/3 flex flex-col items-center">
         <div className="h-full relative dd">
           <img
             src="/assets/tmdup_3d.png"
@@ -60,40 +60,34 @@ const TMDUP = () => {
           </a>
         </div>
       </div>
-      <div className="description flex flex-col justify-between h-2/3 bg-stone-800 w-1/3 px-5">
-        <h1 className="text-red-600 text-center text-3xl mt-10 leading-loose">
-          DEATH. DUTY. MYTHS. <br />
-          <h1 className="description-title">
-            WHAT ELSE COULD SEPARATE KAI FROM HIS TRUE LOVE?
-          </h1>
+      <div className="description pb-7">
+        <h1 className="description-title">
+          <span className="text-red-600">DEATH. DUTY. MYTHS.</span>
+          <br /> <br />
+          WHAT ELSE COULD SEPARATE KAI FROM HIS TRUE LOVE?
         </h1>
-        <div className="dd-reviews pb-5 flex flex-col justify-between text-white">
-          <div className="review m-3">
-            <p className="xl:text-xl">
-              "A beautifully written page-turner with exquisite world-building
-              that is spellbinding, captivating, and completely unique."
-            </p>
-            <br />
-            -- Indiereader (Starred)
-          </div>
-          <div className="review m-3">
-            <p className="xl:text-xl">
-              "It's only the first installment in the <em>Seed of Yggdrasil</em>{" "}
-              series. But it's a strong one that will make readers eager for
-              further entries"
-            </p>
-            <br />
-            -- Kirkus Reviews
-          </div>
-          <div className="review m-3">
-            <p className="xl:text-xl">
-              "A great story with character growth and questions about what
-              makes a genuine hero."
-            </p>
-            <br />
-            -- Reader's Favorite (Starred)
-          </div>
-        </div>
+
+        <p className="text-white responsive m-3">
+          "A beautifully written page-turner with exquisite world-building that
+          is spellbinding, captivating, and completely unique."
+          <br />
+          -- <em>Indiereader (Starred)</em>
+        </p>
+
+        <p className="text-white responsive m-3">
+          "It's only the first installment in the <em>Seed of Yggdrasil</em>{" "}
+          series. But it's a strong one that will make readers eager for further
+          entries"
+          <br />
+          -- <em>Kirkus Reviews</em>
+        </p>
+
+        <p className="text-white responsive m-3">
+          "A great story with character growth and questions about what makes a
+          genuine hero."
+          <br />
+          -- <em>Reader's Favorite (Starred)</em>
+        </p>
       </div>
     </section>
   );
