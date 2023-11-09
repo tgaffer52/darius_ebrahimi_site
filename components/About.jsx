@@ -66,7 +66,7 @@ const About = () => {
               />
               <img
                 src="/assets/instabox/book-castle.jpg"
-                className="insta-photo"
+                className="insta-photo hidden md:block"
                 alt="insta-photo"
               />
               <img
