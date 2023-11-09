@@ -1,5 +1,7 @@
 import React, { forwardRef } from "react";
 import ReactModal from "react-modal";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
 
 const TMDUP = () => {
   // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
@@ -14,6 +16,15 @@ const TMDUP = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dh2hxvsxw",
+    },
+  });
+
+  const tmdup_3d = cld.image("darius_website/tmdup_3d");
+
   return (
     <section
       id="tmdup"
@@ -21,8 +32,8 @@ const TMDUP = () => {
     >
       <div className="lg:w-1/3 flex flex-col items-center">
         <div className="h-full relative dd">
-          <img
-            src="/assets/tmdup_3d.png"
+          <AdvancedImage
+            cldImg={tmdup_3d}
             alt="Detective Death"
             className="h-full"
           />

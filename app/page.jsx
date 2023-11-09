@@ -18,6 +18,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
 
 // fonts
 const baskerville = Libre_Baskerville({
@@ -81,6 +83,12 @@ export default function Home() {
     { section: "contact", ref: contactRef },
   ];
 
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dh2hxvsxw",
+    },
+  });
+
   useEffect(() => {
     const handleScroll = () => {
       const { height: headerHeight } = getDimensions(headerRef.current);
@@ -116,6 +124,12 @@ export default function Home() {
     window.scroll(top);
   };
 
+  // images
+  const logo = cld.image("darius_website/logo");
+  const title = cld.image("darius_website/title");
+  const dd = cld.image("darius_website/DD");
+  const tmdup = cld.image("darius_website/TMDUP");
+
   return (
     <main className={`${baskerville.className} container`}>
       <div>
@@ -126,11 +140,11 @@ export default function Home() {
               scrollToTop();
             }}
           >
-            <img src="/assets/logo.png" className={styles.logo} alt="logo" />
+            <AdvancedImage cldImg={logo} className={styles.logo} alt="logo" />
           </button>
           <div className={styles.title}>
-            <img
-              src="/assets/title.png"
+            <AdvancedImage
+              cldImg={title}
               alt="darius ebrahimi"
               className="m-auto"
             />
@@ -264,8 +278,8 @@ export default function Home() {
           }}
           className="mt-0 p-0"
         >
-          <img
-            src="/assets/Detective Death Cover.png"
+          <AdvancedImage
+            cldImg={dd}
             alt="Detective Death"
             className="book-cover"
           />
@@ -276,8 +290,8 @@ export default function Home() {
           }}
           className={styles.navLink}
         >
-          <img
-            src="/assets/TMDUP.jpg"
+          <AdvancedImage
+            cldImg={tmdup}
             alt="Till Myth Do Us Part"
             className="book-cover"
           />
@@ -285,7 +299,7 @@ export default function Home() {
       </div>
       <div className="border-black w-3/4"></div>
       <div ref={dDRef}>
-        <Detective_Death />
+        <Detective_Death cld={{ cld }} />
       </div>
       <div ref={tMDUPRef}>
         <TMDUP />

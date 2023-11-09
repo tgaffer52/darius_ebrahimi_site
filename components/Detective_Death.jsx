@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 import ReactModal from "react-modal";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+import { AdvancedVideo } from "@cloudinary/react";
+import {} from "../app/page";
 
 const Detective_Death = () => {
   // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
@@ -16,6 +20,15 @@ const Detective_Death = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dh2hxvsxw",
+    },
+  });
+
+  const dd_3d = cld.image("darius_website/dd_3d");
+  const dd_vid = cld.video("darius_website/DD_Video");
   return (
     <div
       id="detective-death"
@@ -23,8 +36,8 @@ const Detective_Death = () => {
     >
       <div className="lg:w-1/3 flex flex-col items-center">
         <div className="h-full relative dd">
-          <img
-            src="/assets/dd_3d.png"
+          <AdvancedImage
+            cldImg={dd_3d}
             alt="Detective Death"
             className="h-full"
           />
@@ -66,10 +79,7 @@ const Detective_Death = () => {
         <h1 className="description-title">
           A DEATH GOD HUNTS FOR KILLERS, MYTHS, AND A NEW START
         </h1>
-        <video className="h-full pt-5" controls>
-          <source src="assets/DD_Video.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+        <AdvancedVideo cldVid={dd_vid} controls />
         <div className="dd-reviews py-5 md:flex grow justify-evenly text-white">
           <div className="dd-review">
             <p>

@@ -4,6 +4,8 @@ import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../app/globals.css";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
 
 const About = () => {
   const [sliderRef] = useKeenSlider({
@@ -12,6 +14,28 @@ const About = () => {
       spacing: 15,
     },
   });
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dh2hxvsxw",
+    },
+  });
+
+  const carousel1 = cld.image("darius_website/carousel/carousel1.jpg");
+  const carousel2 = cld.image("darius_website/carousel/carousel2.jpg");
+  const carousel3 = cld.image("darius_website/carousel/carousel3.jpg");
+  const carousel4 = cld.image("darius_website/carousel/carousel4.jpg");
+  const carousel5 = cld.image("darius_website/carousel/carousel5.jpg");
+  const carousel6 = cld.image("darius_website/carousel/carousel6.jpg");
+
+  // insta box
+  const lightsaberIvy = cld.image("darius_website/instabox/lightsaber_ivy.jpg");
+  const family = cld.image("darius_website/instabox/family.jpg");
+  const headshot = cld.image("darius_website/instabox/headshot.jpg");
+  const ivy = cld.image("darius_website/instabox/ivy.jpg");
+  const vegas = cld.image("darius_website/instabox/vegas.jpg");
+  const bookCastle = cld.image("darius_website/instabox/book-castle.jpg");
+
   return (
     <div
       id="about"
@@ -22,22 +46,22 @@ const About = () => {
         <div className="w-full md:w-3/5 lg:w-1/2 p-8">
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide">
-              <img src="/assets/carousel/carousel1.jpg" alt="carousel1" />
+              <AdvancedImage cldImg={carousel1} alt="carousel1" />
             </div>
             <div className="keen-slider__slide">
-              <img src="/assets/carousel/carousel2.jpg" alt="carousel2" />
+              <AdvancedImage cldImg={carousel2} alt="carousel2" />
             </div>
             <div className="keen-slider__slide">
-              <img src="/assets/carousel/carousel3.jpg" alt="carousel3" />
+              <AdvancedImage cldImg={carousel3} alt="carousel3" />
             </div>
             <div className="keen-slider__slide">
-              <img src="/assets/carousel/carousel4.jpg" alt="carousel4" />
+              <AdvancedImage cldImg={carousel4} alt="carousel4" />
             </div>
             <div className="keen-slider__slide">
-              <img src="/assets/carousel/carousel5.jpg" alt="carousel5" />
+              <AdvancedImage cldImg={carousel5} alt="carousel5" />
             </div>
             <div className="keen-slider__slide">
-              <img src="/assets/carousel/carousel6.jpg" alt="carousel6" />
+              <AdvancedImage cldImg={carousel6} alt="carousel6" />
             </div>
           </div>
         </div>
@@ -49,33 +73,33 @@ const About = () => {
           <div className="bg-white text-center py-3">
             <h3 className="insta-title">-FIND ME ON INSTAGRAM-</h3>
             <div className="flex md:flex-wrap items-center justify-evenly">
-              <img
-                src="/assets/instabox/lightsaber_ivy.jpg"
+              <AdvancedImage
+                cldImg={lightsaberIvy}
                 className="insta-photo"
                 alt="insta-photo"
               />
-              <img
-                src="/assets/instabox/family.jpg"
+              <AdvancedImage
+                cldImg={family}
                 className="insta-photo"
                 alt="insta-photo"
               />
-              <img
-                src="/assets/instabox/headshot.jpg"
+              <AdvancedImage
+                cldImg={headshot}
                 className="insta-photo"
                 alt="insta-photo"
               />
-              <img
-                src="/assets/instabox/book-castle.jpg"
+              <AdvancedImage
+                cldImg={bookCastle}
                 className="insta-photo hidden md:block"
                 alt="insta-photo"
               />
-              <img
-                src="/assets/instabox/vegas.jpg"
+              <AdvancedImage
+                cldImg={vegas}
                 className="insta-photo hidden md:block"
                 alt="insta-photo"
               />
-              <img
-                src="assets/instabox/ivy.jpg"
+              <AdvancedImage
+                cldImg={ivy}
                 className="insta-photo hidden md:block"
                 alt="insta-photo"
               />

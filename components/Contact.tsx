@@ -3,6 +3,8 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../utils/send-emails";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
 
 export type FormData = {
   name: string;
@@ -23,6 +25,14 @@ const Contact: FC = () => {
     sendEmail(data);
     reset();
   }
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dh2hxvsxw",
+    },
+  });
+
+  const holdingIvy = cld.image("darius_website/holding_ivy");
 
   return (
     <section
@@ -75,8 +85,8 @@ const Contact: FC = () => {
           </div>
         </form>
         <div className="flex md:flex-col justify-evenly items-center text-center md:w-1/3 xl:w-1/4">
-          <img
-            src="../assets/holding_ivy.jpg"
+          <AdvancedImage
+            cldImg={holdingIvy}
             className="w-1/4 md:w-full pb-3 md:mx-auto"
             alt=""
           />
