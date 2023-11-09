@@ -42,7 +42,7 @@ a {
 }
 
 .book-cover:hover {
-  height: 660px;
+  transform: scale(1.1, 1.1);
   transition: 1s;
 }
 
@@ -128,7 +128,7 @@ a {
 
 .insta-box {
   max-height: 700px;
-  overflow: scroll;
+  overflow: hidden;
 }
 .insta-title {
   font-family: var(--font-baskerville), serif;

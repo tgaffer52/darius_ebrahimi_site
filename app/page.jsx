@@ -14,7 +14,12 @@ import {
   Cinzel,
   Cormorant_Garamond,
 } from "next/font/google";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+// fonts
 const baskerville = Libre_Baskerville({
   subsets: ["latin"],
   style: ["normal", "italic"],
@@ -37,8 +42,8 @@ const garamond = Cormorant_Garamond({
   variable: "--font-garamond",
   weight: "400",
 });
-// import { Link, animateScroll as scroll } from "react-scroll";
 
+// obtaining scroll height and visible sections
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
   const offsetTop = ele.offsetTop;
@@ -59,12 +64,13 @@ const scrollTo = (ele) => {
 };
 
 export default function Home() {
-  const homeRef = useRef(null);
   const dDRef = useRef(null);
   const tMDUPRef = useRef(null);
   const aboutRef = useRef(null);
   const headerRef = useRef(null);
   const contactRef = useRef(null);
+  const [subnav, setSubnav] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   const [visibleSection, setVisibleSection] = useState();
 
@@ -93,6 +99,8 @@ export default function Home() {
       } else if (!selected && visibleSection) {
         setVisibleSection(undefined);
       }
+
+      setWindowWidth(window.innerWidth);
     };
 
     handleScroll();
@@ -102,8 +110,6 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [visibleSection]);
-
-  const [subnav, setSubnav] = useState(false);
 
   const showSubnav = () => setSubnav(!subnav);
   const scrollToTop = () => {
@@ -194,7 +200,11 @@ export default function Home() {
                   className={styles.navLink}
                   onMouseEnter={() => setSubnav(true)}
                 >
-                  BOOKS
+                  {windowWidth < 768 ? (
+                    <FontAwesomeIcon icon={faBook} />
+                  ) : (
+                    "BOOKS"
+                  )}
                 </button>
               </ul>
               <li
@@ -211,7 +221,11 @@ export default function Home() {
                   }}
                   className={styles.navLink}
                 >
-                  ABOUT
+                  {windowWidth < 768 ? (
+                    <FontAwesomeIcon icon={faUser} />
+                  ) : (
+                    "ABOUT"
+                  )}
                 </button>
               </li>
               <li
@@ -228,7 +242,11 @@ export default function Home() {
                   }}
                   className={styles.navLink}
                 >
-                  CONTACT
+                  {windowWidth < 768 ? (
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  ) : (
+                    "CONTACT"
+                  )}
                 </button>
               </li>
             </ul>
