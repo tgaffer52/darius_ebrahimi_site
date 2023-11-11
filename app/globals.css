@@ -109,7 +109,7 @@ a {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   outline: none;
-  padding: 20px;
+  /* padding: 1rem; */
   z-index: 2;
 }
 
@@ -172,6 +172,7 @@ a {
     left: 0%;
     height: 80%;
     top: 20%;
+    padding: none;
   }
   .preview-button {
     opacity: 1;

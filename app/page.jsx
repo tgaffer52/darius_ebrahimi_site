@@ -157,6 +157,7 @@ export default function Home() {
           <div
             className={styles.navRight}
             onMouseLeave={() => setSubnav(false)}
+            onBlur={() => setSubnav(false)}
           >
             <ul className={styles.navLinks + " " + garamond.className}>
               <ul
@@ -301,7 +302,7 @@ export default function Home() {
       </div>
       <div className="border-black w-3/4"></div>
       <div ref={dDRef}>
-        <Detective_Death cld={{ cld }} />
+        <Detective_Death />
       </div>
       <div ref={tMDUPRef}>
         <TMDUP />

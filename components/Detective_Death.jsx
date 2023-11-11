@@ -28,7 +28,6 @@ const Detective_Death = () => {
   });
 
   const dd_3d = cld.image("darius_website/dd_3d");
-  const dd_vid = cld.video("darius_website/DD_Video");
   return (
     <div
       id="detective-death"
@@ -79,7 +78,14 @@ const Detective_Death = () => {
         <h1 className="description-title">
           A DEATH GOD HUNTS FOR KILLERS, MYTHS, AND A NEW START
         </h1>
-        <AdvancedVideo cldVid={dd_vid} controls />
+        <video controls>
+          <source
+            src="../assets/DD_Video.webm"
+            width="100%"
+            type="video/webm"
+          />
+          Your browser does not support the video tag.
+        </video>
         <div className="dd-reviews py-5 md:flex grow justify-evenly text-white">
           <div className="dd-review">
             <p>
