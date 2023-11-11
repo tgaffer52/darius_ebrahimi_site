@@ -159,7 +159,7 @@ a {
 
 @media (max-width: 768px) {
   .insta-photo {
-    width: 20%;
+    width: 14%;
     margin: 0.5rem;
   }
 
@@ -177,5 +177,11 @@ a {
   .preview-button {
     opacity: 1;
     right: 35%;
+  }
+}
+
+@media (max-width: 639px) {
+  .insta-photo {
+    width: 15%;
   }
 }

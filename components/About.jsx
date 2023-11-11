@@ -45,7 +45,7 @@ const About = () => {
         About Darius Ebrahimi
       </h1>
       <div className="flex flex-wrap justify-evenly items-center">
-        <div className="w-full md:w-3/5 lg:w-1/2 p-8">
+        <div className="w-full md:w-3/5 2xl:w-1/2 p-8">
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide">
               <AdvancedImage cldImg={carousel1} alt="carousel1" />
