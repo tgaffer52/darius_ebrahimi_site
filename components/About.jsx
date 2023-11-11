@@ -70,9 +70,9 @@ const About = () => {
         <a
           href="https://www.instagram.com/dariusebrahimi"
           target="_blank"
-          className="w-full md:w-1/5 insta-box mx-8"
+          className="insta-box"
         >
-          <div className="w-full bg-white text-center py-3">
+          <div className="bg-white text-center py-3">
             <h3 className="insta-title">-FIND ME ON INSTAGRAM-</h3>
             <div className="flex md:flex-wrap items-center justify-evenly px-2">
               <AdvancedImage

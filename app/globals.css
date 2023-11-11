@@ -127,6 +127,7 @@ a {
 }
 
 .insta-box {
+  @apply md:w-1/5 mx-8;
   max-height: 700px;
   overflow: hidden;
 }
@@ -139,8 +140,8 @@ a {
   transition: 0.5s;
 }
 .insta-photo {
+  @apply my-1 lg:my-2;
   width: 40%;
-  margin: 0.5rem;
 }
 
 .contact_input {
@@ -159,6 +160,7 @@ a {
 @media (max-width: 768px) {
   .insta-photo {
     width: 20%;
+    margin: 0.5rem;
   }
 
   .book-cover {
