@@ -157,7 +157,7 @@ export default function Home() {
           <div
             className={styles.navRight}
             onMouseLeave={() => setSubnav(false)}
-            onBlur={() => setSubnav(false)}
+            // onBlur={() => setSubnav(false)}
           >
             <ul className={styles.navLinks + " " + garamond.className}>
               <ul
