@@ -163,6 +163,9 @@ a {
   width: 40%;
   aspect-ratio: 1;
   object-fit: cover;
+}
+
+.goalie {
   object-position: 0px 0px;
 }
 

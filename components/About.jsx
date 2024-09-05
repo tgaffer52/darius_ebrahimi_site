@@ -43,7 +43,7 @@ const About = () => {
 
   // insta box
   const goalie = cld.image("darius_website/instabox/goalie.jpg");
-  const stairs = cld.image("darius_website/carousel/carousel3.jpg");
+  const stairs = cld.image("darius_website/instabox/stairs.jpg");
   const headshot = cld.image("darius_website/instabox/headshot.jpg");
   const ivy = cld.image("darius_website/instabox/ivy.jpg");
   const vegas = cld.image("darius_website/instabox/vegas.jpg");
@@ -133,7 +133,7 @@ const About = () => {
             <div className="flex md:flex-wrap items-center justify-evenly px-2">
               <AdvancedImage
                 cldImg={goalie}
-                className="insta-photo"
+                className="insta-photo goalie"
                 alt="insta-photo"
               />
               <AdvancedImage
