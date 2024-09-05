@@ -1,19 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../app/globals.css";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
+import Arrow from "./Arrow"
 
 const About = () => {
-  const [sliderRef] = useKeenSlider({
-    slides: {
-      perView: 3,
-      spacing: 15,
-    },
-  });
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [loaded, setLoaded] = useState(false);
+    const [sliderRef, instanceRef] = useKeenSlider({
+      initial: 0,
+      loop: true,
+      slides: {
+        perView: 3,
+        spacing: 15,
+      },
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel);
+      },
+      created() {
+        setLoaded(true);
+      },
+    });
 
   const cld = new Cloudinary({
     cloud: {
@@ -23,14 +34,16 @@ const About = () => {
 
   const carousel1 = cld.image("darius_website/carousel/carousel1.jpg");
   const carousel2 = cld.image("darius_website/carousel/carousel2.jpg");
-  const carousel3 = cld.image("darius_website/carousel/carousel3.jpg");
+  const carousel3 = cld.image(
+    "darius_website/carousel/family.jpg"
+  );
   const carousel4 = cld.image("darius_website/carousel/carousel4.jpg");
   const carousel5 = cld.image("darius_website/carousel/carousel5.jpg");
   const carousel6 = cld.image("darius_website/carousel/carousel6.jpg");
 
   // insta box
-  const lightsaberIvy = cld.image("darius_website/instabox/lightsaber_ivy.jpg");
-  const family = cld.image("darius_website/instabox/family.jpg");
+  const goalie = cld.image("darius_website/instabox/goalie.jpg");
+  const stairs = cld.image("darius_website/carousel/carousel3.jpg");
   const headshot = cld.image("darius_website/instabox/headshot.jpg");
   const ivy = cld.image("darius_website/instabox/ivy.jpg");
   const vegas = cld.image("darius_website/instabox/vegas.jpg");
@@ -46,24 +59,67 @@ const About = () => {
       </h1>
       <div className="flex flex-wrap justify-evenly items-center">
         <div className="w-full md:w-3/5 2xl:w-1/2 p-8">
-          <div ref={sliderRef} className="keen-slider">
-            <div className="keen-slider__slide">
-              <AdvancedImage cldImg={carousel1} alt="carousel1" />
-            </div>
-            <div className="keen-slider__slide">
-              <AdvancedImage cldImg={carousel2} alt="carousel2" />
-            </div>
-            <div className="keen-slider__slide">
-              <AdvancedImage cldImg={carousel3} alt="carousel3" />
-            </div>
-            <div className="keen-slider__slide">
-              <AdvancedImage cldImg={carousel4} alt="carousel4" />
-            </div>
-            <div className="keen-slider__slide">
-              <AdvancedImage cldImg={carousel5} alt="carousel5" />
-            </div>
-            <div className="keen-slider__slide">
-              <AdvancedImage cldImg={carousel6} alt="carousel6" />
+          <div className="navigation-wrapper">
+            <div ref={sliderRef} className="keen-slider">
+              <div className="keen-slider__slide">
+                <AdvancedImage
+                  cldImg={carousel1}
+                  alt="carousel1"
+                  className="carousel-img"
+                />
+              </div>
+              <div className="keen-slider__slide">
+                <AdvancedImage
+                  cldImg={carousel2}
+                  alt="carousel2"
+                  className="carousel-img"
+                />
+              </div>
+              <div className="keen-slider__slide">
+                <AdvancedImage
+                  cldImg={carousel3}
+                  alt="carousel3"
+                  className="carousel-img"
+                />
+              </div>
+              <div className="keen-slider__slide">
+                <AdvancedImage
+                  cldImg={carousel4}
+                  alt="carousel4"
+                  className="carousel-img"
+                />
+              </div>
+              <div className="keen-slider__slide">
+                <AdvancedImage
+                  cldImg={carousel5}
+                  alt="carousel5"
+                  className="carousel-img"
+                />
+              </div>
+              <div className="keen-slider__slide">
+                <AdvancedImage cldImg={carousel6} alt="carousel6" />
+              </div>
+              {loaded && instanceRef.current && (
+                <>
+                  <Arrow
+                    left
+                    onClick={(e) =>
+                      e.stopPropagation() || instanceRef.current?.prev()
+                    }
+                    disabled={currentSlide === 0}
+                  />
+
+                  <Arrow
+                    onClick={(e) =>
+                      e.stopPropagation() || instanceRef.current?.next()
+                    }
+                    disabled={
+                      currentSlide ===
+                      instanceRef.current.track.details.slides.length - 1
+                    }
+                  />
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -76,12 +132,12 @@ const About = () => {
             <h3 className="insta-title">-FIND ME ON INSTAGRAM-</h3>
             <div className="flex md:flex-wrap items-center justify-evenly px-2">
               <AdvancedImage
-                cldImg={lightsaberIvy}
+                cldImg={goalie}
                 className="insta-photo"
                 alt="insta-photo"
               />
               <AdvancedImage
-                cldImg={family}
+                cldImg={stairs}
                 className="insta-photo"
                 alt="insta-photo"
               />

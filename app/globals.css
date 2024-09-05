@@ -46,12 +46,6 @@ a {
   transition: 1s;
 }
 
-.dd {
-}
-
-.dd:hover {
-}
-
 .preview-button {
   position: absolute;
   bottom: 45%;
@@ -126,6 +120,31 @@ a {
   max-height: 100vh;
 }
 
+.carousel-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+}
+
 .insta-box {
   @apply md:w-1/5 mx-8;
   max-height: 700px;
@@ -142,6 +161,9 @@ a {
 .insta-photo {
   @apply my-1 lg:my-2;
   width: 40%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 0px 0px;
 }
 
 .contact_input {

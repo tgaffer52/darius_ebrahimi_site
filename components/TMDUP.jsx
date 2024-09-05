@@ -75,7 +75,7 @@ const TMDUP = () => {
         <h1 className="description-title">
           <span className="text-red-600">DEATH. DUTY. MYTHS.</span>
           <br /> <br />
-          WHAT ELSE COULD SEPARATE KAI FROM HIS TRUE LOVE?
+          WINNER OF THE 2023 INDIEREADER AWARD FOR FANTASY
         </h1>
 
         <p className="text-white responsive m-3">

@@ -91,14 +91,14 @@ const Detective_Death = () => {
             <p>
               "A truly original mystery that is humorous, clever, and fun."
               <br />
-              <p className="text-end italic">-- Reader's Favorite (Starred)</p>
+              <span className="text-end italic">-- Reader's Favorite (Starred)</span>
             </p>
           </div>
           <div className="dd-review">
             <p>
               "A sublimely bizarre detective story"
               <br />
-              <p className="text-end italic">-- Kirkus Reviews (Starred)</p>
+              <span className="text-end italic">-- Kirkus Reviews (Starred)</span>
             </p>
           </div>
           <div className="dd-review">
@@ -106,7 +106,7 @@ const Detective_Death = () => {
               "<em>Detective Death</em> manages the impressive feat of living up
               to such a memorable title
               <br />
-              <p className="text-end italic">-- Indiereader</p>
+              <span className="text-end italic">-- Indiereader</span>
             </p>
           </div>
         </div>
